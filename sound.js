@@ -1,10 +1,8 @@
 function playSound(event, audio) {
   audio.play();
-  console.log(event.currentTarget);
   let x = event.currentTarget
   x.classList.add("grow");
   audio.onended = function(event){
-  	console.log("ended");
   	x.setAttribute("class", "none");
   }
 }
